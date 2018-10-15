@@ -1,0 +1,28 @@
+{
+  "name": "bet_project-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjcooper91/bet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "concurrently": "^4.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/wjcooper91/bet/issues"
+  },
+  "homepage": "https://github.com/wjcooper91/bet#readme"
+}
