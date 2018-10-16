@@ -1,26 +1,22 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Pools from "./pages/Pools";
+import Detail from "./pages/Detail";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
 
-import { Route } from 'react-router-dom';
-
-
-// pages
-import Login from './login/Login';
-import home from './home/home';
-
-
-class App extends React.Component {
-
-  render () {
-
-    //JSX
-    return (
+const App = () => (
+  <Router>
     <div>
-
-      <Route exact path = '/' component = {Login}/>
-      <Route path = '/home' component = {home}/>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Pools} />
+        <Route exact path="/pools" component={Pools} />
+        <Route exact path="/pools/:id" component={Detail} />
+        <Route component={NoMatch} />
+      </Switch>
     </div>
-    );
-  }
-}
+  </Router>
+);
 
 export default App;

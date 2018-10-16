@@ -1,28 +1,28 @@
 {
-  "name": "bet_project-3",
+  "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"nodemon server.js\" \"cd client && npm start\""
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wjcooper91/bet.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "concurrently": "^4.0.1"
-  },
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "bugs": {
-    "url": "https://github.com/wjcooper91/bet/issues"
-  },
-  "homepage": "https://github.com/wjcooper91/bet#readme"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17",
+    "if-env": "^1.0.4"
+  }
 }

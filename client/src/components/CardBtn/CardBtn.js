@@ -5,8 +5,10 @@ const CardBtn = props => (
   <button
     onClick={props.onClick}
     className={`card-btn ${props["data-value"]}`}
-    {...props}
-  />
+    answer = {props.answer}
+  >
+  {props.name}
+  </button>
 );
 
 export default CardBtn;
