@@ -1,0 +1,25 @@
+.container-fluid {
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.box {
+    border: 2px solid black;
+    margin-top:25px;
+}
+
+.button-container {
+    display:flex;
+    flex-direction: column;
+}
+
+.logIn {
+    border: black, 5px, solid;
+    margin: 15px 50px;
+}
+
+.title{
+    text-align: center;
+}
+
