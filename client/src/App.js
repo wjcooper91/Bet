@@ -5,6 +5,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Login from  "./pages/login/Login";
+import Results from "./pages/Results/Results"
 
 const App = () => (
   <Router>
@@ -15,6 +16,7 @@ const App = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/userHome" component={Pools} />
         <Route exact path="/pools/:id" component={Detail} />
+        <Route path="/results" component={Results} />
         <Route component={NoMatch} />
       </Switch>
     </div>
