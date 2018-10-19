@@ -19,5 +19,9 @@ export default {
   },
   saveAnswers: function(poolData) {
     return axios.post("/api/answers", poolData);
+  },  
+  getAnswers: function() {
+    return axios.get("/api/answers");
   }
 };
+
