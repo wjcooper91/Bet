@@ -9,6 +9,9 @@ export default {
   getPool: function(id) {
     return axios.get("/api/pools/" + id);
   },
+  getAnswer: function(id) {
+    return axios.get("/api/answers/" + id);
+  },
   // Deletes the pool with the given id
   deletePool: function(id) {
     return axios.delete("/api/pools/" + id);
@@ -17,11 +20,10 @@ export default {
   savePool: function(poolData) {
     return axios.post("/api/pools", poolData);
   },
-  saveAnswers: function(poolData) {
-    return axios.post("/api/answers", poolData);
+  saveAnswers: function(answerData) {
+    return axios.post("/api/answers", answerData);
   },  
   getAnswers: function() {
     return axios.get("/api/answers");
   }
 };
-

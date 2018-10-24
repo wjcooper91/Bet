@@ -1,4 +1,5 @@
 module.exports = {
   Pool: require("./pool"),
-  Answer: require("./answer")
+  Answer: require("./answer"),
+  User: require("./user")
 };

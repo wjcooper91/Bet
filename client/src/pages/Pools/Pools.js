@@ -256,7 +256,7 @@ class Pools extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Pools already made</h1>
+              <h1>Update a Pool</h1>
             </Jumbotron>
             {this.state.pools.length ? (
               <List>

@@ -1,0 +1,28 @@
+h1 {
+    text-align:center;
+    margin-top:15px;
+    text-shadow:0 3px #ebebeb;
+}
+
+.resultsContainer {
+    display:flex;
+    justify-content: center;
+    margin:20px auto;
+    width: 80vw;
+    border:2px solid black;
+    padding:30px;
+}
+
+.userAnswers {
+    margin:10px;
+    padding:10px;
+    width:30%;
+    border:2px solid black;
+}
+
+.dbAnswers {
+    margin:10px;
+    padding:10px;
+    width:30%;
+    border:2px solid black;
+}
