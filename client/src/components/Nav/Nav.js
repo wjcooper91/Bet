@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authentication';
 import { withRouter } from 'react-router-dom';
-
+import pp_logo from '../../media/pp_logo.png';
+import './nav.css';
 
 class Nav extends Component {
 
@@ -39,7 +40,7 @@ class Nav extends Component {
     
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <Link className="navbar-brand" to="/"><img src="client/src/media/pp_logo.png" alt="Pool Party"/></Link>
+            <Link className="navbar-brand" to="/"><img className="headerImg" src={pp_logo} alt="Pool Party"/></Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     {isAuthenticated ? authLinks : guestLinks}
                 </div>
