@@ -39,7 +39,7 @@ class Nav extends Component {
     )
     
     return(
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav className="navBar navbar-expand-lg navbar-dark bg-primary">
             <Link className="navbar-brand" to="/"><img className="headerImg" src={pp_logo} alt="Pool Party"/></Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     {isAuthenticated ? authLinks : guestLinks}
