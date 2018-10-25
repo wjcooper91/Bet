@@ -62,39 +62,24 @@ class UserHome extends Component {
   }
 
   filterPools = () => {
-    let remains = [];
-    console.log("This is the pools obj before the if", this.state.pools);
-    console.log("This is the answers obj before the if", this.state.answers.length);
-    if (this.state.answers.length === 0) {
-      console.log( "This should  not work", this.state.pools)
-    } else {
-      for ( let j = 0; j < this.state.pools.length; j++){
-        for (let k = 0; k < this.state.answers.length; k++){
-          if (this.state.pools[j].name !== this.state.answers[k].poolname){
-            if (remains.length === 0) {
-              remains.push(this.state.pools[j])
-            }else {
-            for (let l = 0; l <remains.length; l++){
-              if(this.state.pools[j] !== remains[l])
-              remains.push(this.state.pools[j])
-            }
-          }
-          }
-        }
+      let allPools = this.state.pools
+      let yourAnswers = this.state.answers  
+      console.log(allPools) 
+      let remains = [];
+
+      const list = yourAnswers.map(obj => obj.poolname);
+
+      let match = allPools.filter(obj => !list.includes(obj.name))
+
+      if (match.length){
+        remains.push(match[0])
       }
-      // console.log("this is the length of answers obj before 1st for loop", this.state.answers.length)
-      //   for ( let j = 0; j < this.state.pools.length; j++){
-      //     console.log("this is the remains array before the " + j + "loop", remains)
-      //     for ( let k = 0; k < this.state.answers.length; k++) {
-      //       if (this.state.pools[j].name !== this.state.answers[k].poolname){
-      //         remains.push(this.state.pools[k]);
-      //       }
-      //     } 
-      //   }
-        console.log("This should work", remains)
+
+
+      console.log(remains)
+
+    
         this.setState({pools: remains})
-        }
-    console.log("This is the pools obj after the loop", this.state.pools);
   }
 
   handleInputChange = event => {
