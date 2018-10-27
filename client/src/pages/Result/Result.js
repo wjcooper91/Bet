@@ -242,23 +242,15 @@ class Result extends Component {
             <Row>
             <h1>Leaderboard</h1>
             </Row>
+
             <Row>
-              <Col size="md-4">
-            <h2>{this.state.entries[0].username}</h2>
-              </Col>
-              <Col size="md-2"></Col>
-              <Col size="md-4">
-              <h2>{this.state.entries[0].score}</h2>
-              </Col>
-            </Row>
-            <Row>
-              <Col size="md-4">
-            {/* <h2>{this.state.entries[1].username}</h2> */}
-              </Col>
-              <Col size="md-2"></Col>
-              <Col size="md-4">
-              {/* <h2>{this.state.entries[1].score}</h2> */}
-              </Col>
+              <ol>
+              {this.state.entries.map(entry => (
+                <li>
+                  {entry.username} - {entry.score}
+                </li>
+              ))}
+              </ol>
             </Row>
           </ Col>
 
