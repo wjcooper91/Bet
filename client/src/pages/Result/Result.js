@@ -190,8 +190,6 @@ class Result extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size="md-1">
-          </ Col>
           <Col size="md-8">
             <Row>
               <Col size="md-6">
@@ -268,7 +266,7 @@ class Result extends Component {
 
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Pools</Link>
+            <Link to="/"><span className="poolDirect">← Back to Pools</span></Link>
           </Col>
           
         </Row>
