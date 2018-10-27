@@ -23,6 +23,9 @@ export default {
   saveAnswers: function(answerData) {
     return axios.post("/api/answers", answerData);
   },  
+  updateAnswer: function(id, answerData) {
+    return axios.put("/api/answers/" + id, answerData);
+  },
   getAnswers: function() {
     return axios.get("/api/answers");
   }

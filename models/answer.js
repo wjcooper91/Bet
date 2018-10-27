@@ -9,6 +9,7 @@ const answerSchema = new Schema({
   answer3: String,
   answer4: String,
   answer5: String,
+  score: Number,
   date: { type: Date, default: Date.now }
 });
 

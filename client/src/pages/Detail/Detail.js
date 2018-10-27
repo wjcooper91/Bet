@@ -58,6 +58,7 @@ class Detail extends Component {
         answer3: this.state.answer3,
         answer4: this.state.answer4,
         answer5: this.state.answer5,
+        score: 0,
       })
       
       this.redirect()

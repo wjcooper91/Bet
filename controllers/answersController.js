@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the poolsController
+// Defining methods for the answersController
 module.exports = {
   findAll: function(req, res) {
     db.Answer
