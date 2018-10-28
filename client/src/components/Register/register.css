@@ -1,0 +1,9 @@
+.regCtn {
+    display: flex;
+    justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.regBtn {
+    font-size:24px !important;
+}

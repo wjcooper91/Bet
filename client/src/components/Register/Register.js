@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { registerUser } from '../../actions/authentication';
 import classnames from 'classnames';
+import './register.css';
 
 
 class Register extends Component {
@@ -120,9 +121,9 @@ class Register extends Component {
                     />
                     {errors.password_confirm && (<div className="invalid-feedback">{errors.password_confirm}</div>)}
                 </div>
-                <div className="form-group">
-                    <button type="submit" className="btn btn-primary">
-                        Register User
+                <div className="form-group regCtn">
+                    <button type="submit" className="btn btn-primary regBtn">
+                        Register
                     </button>
                 </div>
             </form>
