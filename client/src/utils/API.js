@@ -28,5 +28,8 @@ export default {
   },
   getAnswers: function() {
     return axios.get("/api/answers");
+  },
+  updatePool: function(id, poolData) {
+    return axios.put("/api/pools/" + id, poolData);
   }
 };

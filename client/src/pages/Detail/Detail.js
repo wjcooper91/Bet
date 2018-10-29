@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import Ask from "../../components/Ask/Ask"
+import PayPalBtn from "../../components/PayPalBtn/PayPalBtn";
 // import Option from "../../components/Option/Option"
 import { FormBtn } from "../../components/Form";
 // import CardBtn from "../../components/CardBtn/CardBtn";
@@ -340,6 +341,9 @@ changeAnswer5b = ()  => {
         <Row>
           <Col size="md-2">
             <Link to="/">← Back to Pools</Link>
+          </Col>
+          <PayPalBtn></PayPalBtn>
+          <Col size="md-2">
           </Col>
         </Row>
       </Container>

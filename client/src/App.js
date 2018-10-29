@@ -12,9 +12,10 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 
 import UserHome from "./pages/UserHome";
-import Pools from "./pages/Pools";
+import Admin from "./pages/Admin";
 import Detail from "./pages/Detail";
 import Result from "./pages/Result";
+import Update from "./pages/Update";
 
 import NoMatch from "./pages/NoMatch";
 
@@ -42,12 +43,13 @@ class App extends Component {
             <Nav />
             <Switch>
               <Route exact path="/" component={Login} />
-              <Route exact path="/admin" component={Pools} />
+              <Route exact path="/admin" component={Admin} />
               <Route exact path="/pools/:id" component={Detail} />
               <Route exact path="/answers/:id" component={Result} />
               <Route exact path="/userHome" component={UserHome} />
               <Route exact path="/register" component={ Register } />
               <Route exact path="/login" component={ Login } />
+              <Route exact path="/update/:id" component={Update} />
               <Route component={NoMatch} />
             </Switch>
           </div>
