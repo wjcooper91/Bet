@@ -8,7 +8,7 @@ router.route("/")
 
 // Matches with "/api/pools/:id"
 router
-  .route("/:id")
+  .route("/:_id.ObjectId")
   .get(poolsController.findById)
   .put(poolsController.update)
   .delete(poolsController.remove)
