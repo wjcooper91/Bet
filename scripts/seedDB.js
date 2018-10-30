@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://User:poolparty1@ds245523.mlab.com:45523/p00l-party"
+  "mongodb://User:poolparty@ds119306.mlab.com:19306/heroku_n5thnsdd"
   // "mongodb://localhost/p00l-party"
 );
 
