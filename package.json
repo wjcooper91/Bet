@@ -10,6 +10,7 @@
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "build": "cd client && npm run build",
+    "install": "npm install --save react-paypal-express-checkout",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
