@@ -5,7 +5,8 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/testProject3"
+  "mongodb://<User>:<poolparty1>@ds245523.mlab.com:45523/p00l-party"
+  // "mongodb://localhost/p00l-party"
 );
 
 const poolSeed = [
